@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Computer, Database, ServerCog, Settings } from 'lucide-react';
+import { Computer, Database, ServerCog, Settings, Network } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -47,10 +47,16 @@ const Services = () => {
       delay: 'animation-delay-600',
     },
     {
+      title: 'Network Infrastructure & Security',
+      description: 'Secure, reliable, and scalable network solutions to support your business operations and growth.',
+      icon: Network,
+      delay: 'animation-delay-900',
+    },
+    {
       title: 'DevOps & Cloud Solutions',
       description: 'Streamlined deployment pipelines and cloud infrastructure to maximize operational efficiency.',
       icon: Settings,
-      delay: 'animation-delay-900',
+      delay: 'animation-delay-1200',
     },
   ];
 
@@ -64,7 +70,7 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}

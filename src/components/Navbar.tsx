@@ -15,6 +15,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <a href="#services" className="text-foreground hover:text-harkens-accent transition-colors">Services</a>
           <a href="#technologies" className="text-foreground hover:text-harkens-accent transition-colors">Technologies</a>
+          <a href="#team" className="text-foreground hover:text-harkens-accent transition-colors">Team</a>
           <a href="#about" className="text-foreground hover:text-harkens-accent transition-colors">About Us</a>
           <a href="#contact" className="text-foreground hover:text-harkens-accent transition-colors">Contact</a>
         </div>

@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				harkens: {
+					DEFAULT: '#0F172A',  // Deep navy blue
+					light: '#1E293B',    // Lighter navy
+					dark: '#0B1222',     // Darker navy
+					accent: '#06B6D4',   // Teal accent
+					'accent-light': '#22D3EE', // Lighter teal
+					'accent-dark': '#0891B2', // Darker teal
+					gray: '#94A3B8',     // Muted gray
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,39 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				'pulse-light': {
+					'0%, 100%': { opacity: '0.6' },
+					'50%': { opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.7s ease-out',
+				'fade-in-faster': 'fade-in 0.4s ease-out',
+				'slide-in': 'slide-in 0.7s ease-out',
+				'pulse-light': 'pulse-light 3s ease-in-out infinite'
 			}
 		}
 	},
